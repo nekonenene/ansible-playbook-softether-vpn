@@ -1,12 +1,6 @@
-# Ansible Playbooks for Cryptocurrency TestNet Node
+# Ansible Playbook for SoftEther VPN server
 
-Let's build your cryptocurrency node with Ansible!
-
-
-## Supporting cryptocurrency
-
-- Bitcoin
-- DASH
+see **[SoftEther VPN Project](https://www.softether.org)**
 
 
 ## Requirement
