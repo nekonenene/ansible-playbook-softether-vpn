@@ -1,0 +1,7 @@
+- hosts: vpn
+  vars_files:
+    - group_vars/vars.yml
+  roles:
+    - apt
+    - config
+    - vpn

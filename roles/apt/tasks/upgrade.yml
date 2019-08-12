@@ -1,0 +1,5 @@
+- name: upgrade all packages
+  become: true
+  become_user: root
+  apt:
+    upgrade: full

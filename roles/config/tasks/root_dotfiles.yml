@@ -1,0 +1,7 @@
+- name: copy dotfiles for root
+  become: true
+  become_user: root
+  copy:
+    src: files/
+    dest: "/root/"
+    mode: 0644

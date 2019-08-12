@@ -1,0 +1,3 @@
+- import_tasks: update.yml
+- import_tasks: upgrade.yml
+- import_tasks: autoremove.yml

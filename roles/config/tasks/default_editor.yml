@@ -1,0 +1,4 @@
+- name: change default editor to vim (avoid nano)
+  become: true
+  become_user: root
+  shell: "update-alternatives --install /usr/bin/editor editor `which vim` 100"

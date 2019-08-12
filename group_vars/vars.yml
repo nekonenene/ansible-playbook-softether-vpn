@@ -1,0 +1,4 @@
+# Set yout server password if you need
+#ansible_become_pass: password
+
+systemd_service_dir: /etc/systemd/system

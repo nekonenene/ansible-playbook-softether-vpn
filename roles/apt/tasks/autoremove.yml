@@ -1,0 +1,5 @@
+- name: remove unused dependency packages
+  become: true
+  become_user: root
+  apt:
+    autoremove: yes

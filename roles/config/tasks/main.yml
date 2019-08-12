@@ -1,0 +1,3 @@
+- import_tasks: hosts.yml
+- import_tasks: default_editor.yml
+- import_tasks: root_dotfiles.yml

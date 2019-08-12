@@ -1,0 +1,5 @@
+- name: update all packages
+  become: true
+  become_user: root
+  apt:
+    update_cache: yes
