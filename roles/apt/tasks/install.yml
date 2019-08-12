@@ -1,0 +1,7 @@
+- name: install build packages
+  become: true
+  become_user: root
+  apt:
+    name:
+      - build-essential
+    state: latest

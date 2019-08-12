@@ -4,4 +4,5 @@
   roles:
     - apt
     - config
+    - ufw
     - vpn

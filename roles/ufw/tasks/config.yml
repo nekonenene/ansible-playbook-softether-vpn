@@ -1,0 +1,33 @@
+- name: logging to /var/log/ufw.log
+  become: true
+  become_user: root
+  ufw:
+    logging: "on"
+
+- name: set the default incoming policy (ALL deny)
+  become: true
+  become_user: root
+  ufw:
+    direction: incoming
+    policy: deny
+
+- name: set the default outgoing policy (ALL allow)
+  become: true
+  become_user: root
+  ufw:
+    direction: outgoing
+    policy: allow
+
+- name: allow SSH port number
+  become: true
+  become_user: root
+  ufw:
+    rule: allow
+    proto: tcp
+    port: "22"
+
+- name: reloads firewall and enables firewall on boot
+  become: true
+  become_user: root
+  ufw:
+    state: enabled

@@ -1,0 +1,6 @@
+- name: install Ubuntu firewall package
+  become: true
+  become_user: root
+  apt:
+    name: ufw
+    state: latest

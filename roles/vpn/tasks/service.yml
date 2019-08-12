@@ -1,0 +1,21 @@
+- name: add softether service
+  become: true
+  become_user: root
+  template:
+    src: softether.service.j2
+    dest: /etc/systemd/system/softether.service
+    mode: 0644
+  notify: restart softether
+
+- name: systemctl daemon-reload
+  become: true
+  become_user: root
+  command: systemctl daemon-reload
+
+- name: ensure started, enable on boot
+  become: true
+  become_user: root
+  service:
+    name: softether
+    state: started
+    enabled: yes

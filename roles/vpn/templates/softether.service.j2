@@ -1,0 +1,13 @@
+[Unit]
+Description=SoftEther VPN Server Service
+
+[Service]
+User=root
+WorkingDirectory={{ softether_dir }}
+ExecStart={{ softether_dir }}/vpnserver start
+ExecStop={{ softether_dir }}/vpnserver stop
+Type=forking
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

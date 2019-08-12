@@ -1,0 +1,11 @@
+# Ref: https://ja.softether.org/4-docs/2-howto/L2TP_IPsec_Setup_Guide/1#section_11
+- name: allow ports for L2TP over IPsec
+  become: true
+  become_user: root
+  ufw:
+    rule: allow
+    proto: udp
+    port: "{{ item }}"
+  loop:
+    - "500"
+    - "4500"
