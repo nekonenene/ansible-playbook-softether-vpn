@@ -19,6 +19,8 @@
 - name: build vpnserver, vpncmd
   become: true
   become_user: root
-  make:
+  expect:
+    command: make
     chdir: "{{ softether_dir }}"
-    target: i_read_and_agree_the_license_agreement
+    responses:
+      (?i)Please choose one of above number: "1"   
